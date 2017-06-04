@@ -1,0 +1,53 @@
+1、再次修改文件
+$ git add readme.txt
+$ git commit -m "append GPL"
+[master 3628164] append GPL
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Git is a distributed version control system.
+Git is free software distributed under the GPL.
+现在有
+版本1：wrote a readme file
+版本2：add distributed
+版本3：append GPL
+
+2、用git log命令查看
+$ git log
+commit 3628164fb26d48395383f8f31179f24e0882e1e0
+Author: Michael Liao <askxuefeng@gmail.com>
+Date:   Tue Aug 20 15:11:49 2013 +0800
+    append GPL
+
+commit ea34578d5496d7dd233c827ed32a8cd576c5ee85
+Author: Michael Liao <askxuefeng@gmail.com>
+Date:   Tue Aug 20 14:53:12 2013 +0800
+    add distributed
+
+commit cb926e7ea50ad11b8f9e909c05226233bf755030
+Author: Michael Liao <askxuefeng@gmail.com>
+Date:   Mon Aug 19 17:51:55 2013 +0800
+    wrote a readme file
+    
+git log命令显示从最近到最远的提交日志，如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数
+$ git log --pretty=oneline
+3628164fb26d48395383f8f31179f24e0882e1e0 append GPL
+ea34578d5496d7dd233c827ed32a8cd576c5ee85 add distributed
+cb926e7ea50ad11b8f9e909c05226233bf755030 wrote a readme file
+
+在Git中，用HEAD表示当前版本，也就是最新的提交3628164...882e1e0（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，
+当往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。
+
+3、我们要把当前版本“append GPL”回退到上一个版本“add distributed”，就可以使用git reset命令：
+$ git reset --hard HEAD^
+HEAD is now at ea34578 add distributed
+
+看看readme.txt的内容是不是版本add distributed：
+$ cat readme.txt
+Git is a distributed version control system.
+Git is free software.
+还可以继续回退到上一个版本wrote a readme file
+
+4、Git提供了一个命令git reflog用来记录你的每一次命令，找到那个append GPL的commit id是3628164...，于是就可以指定回到未来的某个版本
+$ git reset --hard 3628164
+HEAD is now at 3628164 append GPL
+
+
