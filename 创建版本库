@@ -1,0 +1,25 @@
+1、选择地方创建版本库（版本库是.git）
+$ mkdir learngit  //创建文件夹
+$ cd learngit  //进入
+$ pwd  //显示当前目录
+
+2、通过命令把当前文件夹变成git仓库
+$ git init
+Initialized empty Git repository in /Users/michael/learngit/.git/
+
+3、新建一个文件readme.txt放到当前目录下
+Git is a version control system.
+Git is free software.
+3-1、用命令git add告诉Git，把文件添加到仓库：执行后没有任何显示
+$ git add readme.txt
+3-2、用命令git commit告诉Git，把文件提交到仓库
+$ git commit -m "wrote a readme file"
+[master (root-commit) cb926e7] wrote a readme file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 readme.txt
+简单解释一下git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录
+
+为什么Git添加文件需要add，commit一共两步呢？因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：
+$ git add file1.txt
+$ git add file2.txt file3.txt
+$ git commit -m "add 3 files."
