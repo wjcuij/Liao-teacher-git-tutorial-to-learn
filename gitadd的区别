@@ -1,0 +1,17 @@
+git add 的各种区别:
+
+git add -A   // 添加所有改动
+
+git add *     // 添加新建文件和修改，但是不包括删除
+
+git add .    // 添加新建文件和修改，但是不包括删除
+
+git add -u   // 添加修改和删除，但是不包括新建文件
+在 commit 前撤销 add:
+
+git reset <file> // 撤销提交单独文件
+
+git reset        // unstage all due changes
+add/commit 前撤销对文件的修改:
+
+git checkout -- README.md  // 注意, add添加后(同commit提交后)就无法通过这种方式撤销修改
