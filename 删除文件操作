@@ -1,0 +1,15 @@
+1、直接用rm删除文件是直接删掉工作区的文件，这时暂存区还没删除
+rm file
+用git status查看会告诉你工作区和版本库就不一致了，告诉你哪些文件被删除了
+这时可以直接用 git checkout -- file 复原
+git checkout -- file
+如果要继续删除的话
+git rm file
+git checkout -m "explain"
+
+2、可以直接用git rm file删除是，这一步骤是直接把工作区和暂存区一起操作删了
+在还没git commit -m ""之前可以用git reset HEAD 命令修改库版本库指向,HEAD指向了最新的版本,同时清空了 add 以后的暂存区，复原文件
+git reset HEAD
+git checkout -- test.txt
+继续删除的话：git commit -m ""
+
