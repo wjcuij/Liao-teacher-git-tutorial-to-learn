@@ -14,7 +14,7 @@ $ git push -u origin master
 （由于查看状态git status的时候总是有出现HEAD detached from 09d5a14）
 
 贴个别人的方法吧：
-![这是图片，如果你看得到这些文字，那么图片裂了](https://github.com/wjcuij/demo/blob/master/img/asd.png)
+![image](https://raw.githubusercontent.com/wjcuij/demo/master/img/asd.png)
 
 上面两个方法都不行于是我又换了另外一种方法：
 1、先克隆(前提是你在远程库里有这个库)
