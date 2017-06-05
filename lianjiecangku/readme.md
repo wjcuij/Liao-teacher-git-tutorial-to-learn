@@ -9,7 +9,7 @@
 - - $ git push -u origin master
 #（由于查看状态git status的时候总是有出现HEAD detached from 09d5a14，错误查不出所以就失败了）
 贴个别人的方法吧：
---------------
+==============
 ![image](https://github.com/wjcuij/demo/blob/master/img/asd.png)
 
 上面两个方法都不行于是我又查到了了另外一种方法
