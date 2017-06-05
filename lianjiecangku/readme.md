@@ -1,6 +1,6 @@
 来到这一步折腾了几个小时，先说下不出错误的情况下正常步骤吧：
 
-- 创建SSH Key。在用户主目录下C:\Users\Administrator，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有打开Shell（Windows下打开Git Bash），创建SSH Key：
+- 创建SSH Key。在用户主目录下C:\Users\Administrator，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有打开Shell（Windows下打开Git Bash），创建SSH Key。
 $ ssh-keygen -t rsa -C "youremail@example.com"
 - 登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，另外一个是私钥
 - 连接远程库
