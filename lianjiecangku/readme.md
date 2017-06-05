@@ -9,30 +9,31 @@
 - - $ git push -u origin master
 #（由于查看状态git status的时候总是有出现HEAD detached from 09d5a14，错误查不出所以就失败了）<br>
 贴个别人的方法吧：
------------------------
+---------------
 ![image](https://github.com/wjcuij/demo/blob/master/img/asd.png)
 
-###上面两个方法都不行于是我又换了另外一种方法
+上面两个方法都不行于是我又查到了了另外一种方法
+-----------------------------------------
 - 先克隆(前提是你在远程库里有这个库)learngit是远程库的名称
 - - $ git clone https://github.com/wjcuij/learngit.git
-> Cloning into 'learngit'...
-> remote: Counting objects: 3, done.
-> remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-> Unpacking objects: 100% (3/3), done.
-> Checking connectivity... done.
+> Cloning into 'learngit'...<br>
+> remote: Counting objects: 3, done.<br>
+> remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0<br>
+> Unpacking objects: 100% (3/3), done.<br>
+> Checking connectivity... done.<br>
 - 然后进入那个文件随便添加一个文件
 - - $ git add a.txt
 - - $ git commit -m "add 1 file"
 - 然后推上去
 - - $ git push origin master
-> Fatal: AggregateException encountered.
-> Username for 'https://github.com': wjcuij
-> Counting objects: 3, done.
-> Delta compression using up to 2 threads.
-> Compressing objects: 100% (2/2), done.
-> Writing objects: 100% (3/3), 284 bytes | 0 bytes/s, done.
-> Total 3 (delta 0), reused 0 (delta 0)
-> To https://github.com/wjcuij/learngit.git
->    c2271a5..07cadad  master -> master`
+> Fatal: AggregateException encountered.<br>
+> Username for 'https://github.com': wjcuij<br>
+> Counting objects: 3, done.<br>
+> Delta compression using up to 2 threads.<br>
+> Compressing objects: 100% (2/2), done.<br>
+> Writing objects: 100% (3/3), 284 bytes | 0 bytes/s, done.<br>
+> Total 3 (delta 0), reused 0 (delta 0)<br>
+> To https://github.com/wjcuij/learngit.git<br>
+>    c2271a5..07cadad  master -> master<br>
 
 >>>上github查看库，成了！！！
