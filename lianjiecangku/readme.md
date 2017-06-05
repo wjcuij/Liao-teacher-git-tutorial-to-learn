@@ -1,19 +1,14 @@
 来到这一步折腾了几个小时，先说下不出错误的情况下正常步骤吧：
-1、
-创建SSH Key。在用户主目录下C:\Users\Administrator，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有
-打开Shell（Windows下打开Git Bash），创建SSH Key：
+
+- 创建SSH Key。在用户主目录下C:\Users\Administrator，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有打开Shell（Windows下打开Git Bash），创建SSH Key：
 $ ssh-keygen -t rsa -C "youremail@example.com"
-2、
-登陆GitHub，打开“Account settings”，“SSH Keys”页面：
-然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，另外一个是私钥
-
-3、连接远程库
+- 登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，另外一个是私钥
+- 连接远程库
 $ git remote add origin git@github.com:michaelliao/learngit.git
-4、就可以把本地库的所有内容推送到远程库上：
+- 就可以把本地库的所有内容推送到远程库上：
 $ git push -u origin master
-（由于查看状态git status的时候总是有出现HEAD detached from 09d5a14）
-
-贴个别人的方法吧：
+- - （由于查看状态git status的时候总是有出现HEAD detached from 09d5a14）
+- 贴个别人的方法吧：
 ![image](https://github.com/wjcuij/demo/blob/master/img/asd.png)
 
 上面两个方法都不行于是我又换了另外一种方法：
