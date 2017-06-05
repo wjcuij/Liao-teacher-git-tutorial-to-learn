@@ -50,3 +50,5 @@ Git is free software.
 $ git reset --hard 3628164
 HEAD is now at 3628164 append GPL
 
+git diff HEAD -- readme.txt  查看最新版本和在工作区的区别
+
