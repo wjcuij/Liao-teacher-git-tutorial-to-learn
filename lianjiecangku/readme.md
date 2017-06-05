@@ -42,8 +42,8 @@
 
 中间有出过输入
 - $ git remote add origin git@github.com:wjcuij/learngit.git
-  *  fatal: remote origin already exists.的错误
-    *  $ git remote rm origin只要清除远程主机名就好了
+ - fatal: remote origin already exists.的错误
+  - $ git remote rm origin只要清除远程主机名就好了
     
 
 
