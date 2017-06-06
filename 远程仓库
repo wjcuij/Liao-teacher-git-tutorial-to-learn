@@ -1,3 +1,4 @@
-第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
+第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，
+如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
 $ ssh-keygen -t rsa -C "youremail@example.com"
 创建后要在C:\Users\Administrator这个路径看下，可能是隐藏文件要在界面左上角的组织——文件夹和搜索选项——查看——显示隐藏的文件，就可以看到.ssh这个文件夹了
