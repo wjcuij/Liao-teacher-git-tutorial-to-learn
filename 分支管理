@@ -1,0 +1,49 @@
+介绍：
+====
+分支在实际中有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人
+不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。
+现在有了分支，就不用怕了。你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，
+再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。
+
+首先，我们创建dev分支，然后切换到dev分支：
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+$ git branch dev
+$ git checkout dev
+Switched to branch 'dev'
+
+然后，用git branch命令查看当前分支：
+$ git branch
+* dev
+  master
+  
+然后，我们就可以在dev分支上正常提交，比如对readme.txt做个修改，加上一行：
+Creating a new branch is quick.
+
+然后提交：
+$ git add readme.txt 
+$ git commit -m "branch test"
+[dev fec145a] branch test
+ 1 file changed, 1 insertion(+)
+ 
+现在，dev分支的工作完成，我们就可以切换回master分支：
+$ git checkout master
+Switched to branch 'master'
+
+切换回master分支后，再查看一个readme.txt文件，刚才添加的内容不见了！因为那个提交是在dev分支上，而master分支此刻的提交点并没有变
+现在，我们把dev分支的工作成果合并到master分支上：
+$ git merge dev
+Updating d17efd8..fec145a
+Fast-forward
+ readme.txt |    1 +
+ 1 file changed, 1 insertion(+)
+ 
+ 合并完成后，就可以放心地删除dev分支了：
+$ git branch -d dev
+Deleted branch dev (was fec145a).
+
+删除后，查看branch，就只剩下master分支了：
+$ git branch
+* master
