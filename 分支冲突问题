@@ -1,0 +1,23 @@
+当切换一个分支修改内容并
+git add name
+git commit -m "name"时
+
+切换到别的分支也修改时，合并时会出现冲突，
+$ git merge feature1
+Auto-merging readme.txt
+CONFLICT (content): Merge conflict in readme.txt
+Automatic merge failed; fix conflicts and then commit the result.
+Git告诉我们，readme.txt文件存在冲突，必须手动解决冲突后再提交。git status也可以告诉我们冲突的文件：
+
+git status可以看出冲突
+这时可以打开冲突的文件看内容，并修改当前内容与冲突内容一致并
+git add name
+git commit -m "name"
+
+这时就已经合并了就可以解决冲突，可以
+$ git branch -d featurel 删除分支
+
+
+用git log --graph可以查看分支合并图
+git log --graph --pretty=oneline --abbrev-commit
+
