@@ -1,4 +1,5 @@
 当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支issue-101来修复它，但是，等等，当前正在dev上进行的工作还没有提交：
+
 > $ git status
 > # On branch dev
 > # Changes to be committed:
