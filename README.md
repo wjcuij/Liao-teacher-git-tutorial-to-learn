@@ -6,3 +6,5 @@
 - 很早就听过github，但总是因为种种原因没去基础的学习。
 - 到此git已经学习完毕，对git的了解也已增进不少，发现github确实是个代码管理的好网站，以后会多多在这里管理代码的。
 
+### 下面贴一张忘了从哪弄来的git命令吧
+![image](https://github.com/wjcuij/Liao-teacher-git-tutorial-to-learn/blob/master/jiaocheng.jpg)
